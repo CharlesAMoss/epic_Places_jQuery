@@ -1,23 +1,18 @@
-# _Address Book_
-## _9/13/2015_
-### By Charles Moss
+# _Places you have been!_
+## _Enter details about travel and recall details, 9/13/2015_
+### By Charles Moss, Jose Torres
 ## Description
-_User enters a sadness to convert. Output is converted happiness._
-
-## Demo
+_User enters locale, year, landmarks, highlights, and notes. Outputs a list by local/year that can be expaned to show other details._
 
 ## Setup
 _Clone and open index.html in your browser._  
 
 ## Technologies Used
-_This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._
+_This project has a dependency for jQuery._
 
-## To Do
-
-## Aside
 
 ### Legal
-Copyright (c) 2015 Charles A Moss
+Copyright (c) 2015 Charles A Moss, Jose Torres
 
 This software is licensed under the MIT license.
 

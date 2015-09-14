@@ -1,8 +1,3 @@
-// var magic = function (sadness) {
-//
-//     return 'happiness';
-// };
-
 $(document).ready(function() {
     // $("#add-address").click(function() {
     //     $("#new-addresses").append('<div class="new-address">' +
