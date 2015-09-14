@@ -1,41 +1,70 @@
-var roman = function (num) {
-
-    var result = "";
-    var romanNumerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
-    var numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-
-    for (var i = 0; i <= romanNumerals.length; i++) {
-        while(num >= numbers[i]) {
-            result += romanNumerals[i];
-            num -= numbers[i];
-        }
-    }
-    return result;
-};
-
-
-// Symbol  Value
-// I       1
-// V       5
-// X       10
-// L       50
-// C       100
-// D       500
-// M       1,000
-
+// var magic = function (sadness) {
+//
+//     return 'happiness';
+// };
 
 $(document).ready(function() {
+    // $("#add-address").click(function() {
+    //     $("#new-addresses").append('<div class="new-address">' +
+    //         '<div class="form-group">' +
+    //         '<label for="new-street">Street</label>' +
+    //         '<input type="text" class="form-control new-street">' +
+    //         '</div>' +
+    //         '<div class="form-group">' +
+    //         '<label for="new-city">City</label>' +
+    //         '<input type="text" class="form-control new-city">' +
+    //         '</div>' +
+    //         '<div class="form-group">' +
+    //         '<label for="new-state">State</label>' +
+    //         '<input type="text" class="form-control new-state">' +
+    //         '</div>' +
+    //         '</div>');
+    // });
 
-    $("form#roman").submit(function(event) {
-
-        var num = $("input#num").val();
-
-        var result = roman(num);
-
-        $("#result p").text(result);
-
-        $("#result").show();
+    $("form#new-place").submit(function(event) {
         event.preventDefault();
-    });
 
+        var inputtedLocale = $("input#new-locale").val();
+        var inputtedYear = $("input#new-year").val();
+
+        var newPlace = {
+            locale: inputtedLocale,
+            year: inputtedYear,
+            details: []
+        };
+
+        $(".new-detail").each(function() {
+            var inputtedLandmark = $(this).find("input.new-landmark").val();
+            var inputtedHilite = $(this).find("input.new-hilite").val();
+            var inputtedNotes = $(this).find("input.new-note").val();
+
+            var newDetail = {
+                landmark: inputtedLandmark,
+                highlight: inputtedHilite,
+                notes: inputtedNotes
+            };
+            newPlace.details.push(newDetail);
+        });
+
+        $("ul#places").append("<li><span class='place'>" + newPlace.locale + " " + newPlace.year + "</span></li>");
+
+        $(".place").last().click(function() {
+            $("#show-place").show();
+
+            $("#show-place h2").text(newPlace.locale);
+            $(".locale").text(newPlace.locale);
+            $(".year").text(newPlace.year);
+
+            $("ul#details").text("");
+            newPlace.details.forEach(function(detail) {
+                $("ul#details").append("<li>" + detail.landmark + ", " + detail.highlight + ", " + detail.notes + "</li>");
+            });
+        });
+
+        $("input#new-locale").val("");
+        $("input#new-year").val("");
+        $("input.new-landmark").val("");
+        $("input.new-hilite").val("");
+        $("input.new-note").val("");
+    });
 });

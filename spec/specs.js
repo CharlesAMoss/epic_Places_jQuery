@@ -1,9 +1,9 @@
-describe('roman', function() {
-  it("inputs a number and outputs a string", function() {
-    expect(roman(1999)).to.be.a('string');
+describe('magic', function() {
+  it("inputs 'sadness' and outputs a string", function() {
+    expect(magic('sadness')).to.be.a('string');
   });
 
-  it("takes input number and returns roman numerals", function() {
-    expect(roman(2012)).to.equal("MMXII");
+  it("inputs 'sadness' and outputs 'happiness'", function() {
+    expect(magic('sadness')).to.equal('happiness');
   });
 });

@@ -1,8 +1,10 @@
-# _Roman numerals_
-## _Convert numbers into roman numerals 9/10/2015_
-### By Charles Moss and Jordan Johansen
+# _Address Book_
+## _9/13/2015_
+### By Charles Moss
 ## Description
-_User enters a number to convert.  Outputs is converted roman numerals._
+_User enters a sadness to convert. Output is converted happiness._
+
+## Demo
 
 ## Setup
 _Clone and open index.html in your browser._  
@@ -10,8 +12,12 @@ _Clone and open index.html in your browser._
 ## Technologies Used
 _This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._
 
+## To Do
+
+## Aside
+
 ### Legal
-Copyright (c) 2015 Charles A Moss and Jordan Johansen
+Copyright (c) 2015 Charles A Moss
 
 This software is licensed under the MIT license.
 
